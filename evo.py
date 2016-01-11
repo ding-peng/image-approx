@@ -10,16 +10,16 @@ from PIL import Image, ImageDraw, ImageChops
 
 from genetic import genetic, gene
 
-
-TARGET = Image.open('test.jpg').convert('RGB')
-TARGET = TARGET.resize((500, 500))
-
+TARGET_IMG_NAME = 'test.jpg'
 POP_SIZE = 25
 MUT_RATE = 0.05
 GENERATIONS = 100000
 CHILDREN_PER_GEN = 5
 TRI_NUM = 100
 BACKGROUND_COLOR = 'white'
+
+TARGET = Image.open(TARGET_IMG_NAME).convert('RGB')
+TARGET = TARGET.resize((500, 500))
 
 
 class individual:
